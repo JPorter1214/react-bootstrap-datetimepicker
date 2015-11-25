@@ -99,6 +99,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ConstantsJs2 = _interopRequireDefault(_ConstantsJs);
 
+	var MaskedInput = require('icg-react-input-mask')
+
 	var DateTimeField = (function (_Component) {
 	  _inherits(DateTimeField, _Component);
 
@@ -453,7 +455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2["default"].createElement(
 	          "div",
 	          { className: "input-group date " + this.size(), ref: "datetimepicker" },
-	          _react2["default"].createElement("input", _extends({ className: "form-control", onChange: this.onChange, type: "text", value: this.state.inputValue }, this.props.inputProps)),
+	          _react2["default"].createElement(MaskedInput, _extends({mask: '99/99/9999', alwaysShowMask: true, maskChar: ' ', className: "form-control", onChange: this.onChange, type: "text", value: this.state.inputValue }, this.props.inputProps)),
 	          _react2["default"].createElement(
 	            "span",
 	            { className: "input-group-addon", onBlur: this.onBlur, onClick: this.onClick, ref: "dtpbutton" },
